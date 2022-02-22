@@ -7,7 +7,7 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-func Authorization() gin.HandlerFunc {
+func Authentication() gin.HandlerFunc {
 	return func(c *gin.Context) {
 		verifyToken, err := helpers.VerifyToken(c)
 		_ = verifyToken
