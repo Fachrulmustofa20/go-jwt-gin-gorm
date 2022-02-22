@@ -13,7 +13,7 @@ import (
 func ProductAuthorization() gin.HandlerFunc {
 	return func(c *gin.Context) {
 		db := database.GetDB()
-		productId, err := strconv.Atoi(c.Param("productID"))
+		productId, err := strconv.Atoi(c.Param("productId"))
 		if err != nil {
 			c.AbortWithStatusJSON(http.StatusBadRequest, gin.H{
 				"error":   "Bad Request",
